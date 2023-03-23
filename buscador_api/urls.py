@@ -22,5 +22,5 @@ from search.api.views import SearchApiViewSet
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router_searchs.urls)),
-    path('search/palabra/<str:palabra>/', SearchApiViewSet.as_view({'get': 'buscar_palabra'})),
+    path('search/<str:palabraIn>/', SearchApiViewSet.as_view({'get': 'buscar_palabra'})),
 ]
