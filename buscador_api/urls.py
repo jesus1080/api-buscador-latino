@@ -23,4 +23,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router_searchs.urls)),
     path('search/<str:palabraIn>/', SearchApiViewSet.as_view({'get': 'buscar_palabra'})),
+    path('api/reporte/', SearchApiViewSet.as_view({'get': 'reporte'})),
 ]
